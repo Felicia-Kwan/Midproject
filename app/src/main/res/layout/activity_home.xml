@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".HomeActivity">
+
+        <TextView
+            android:id="@+id/tv_tipeKendaraan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Tipe Kendaraan [Mobil/Motor]"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_tipeKendaraan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:text="Save Type"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tipeKendaraan" />
+
+        <EditText
+            android:id="@+id/et_tipeKendaraan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_tipeKendaraan"
+            app:layout_constraintEnd_toStartOf="@+id/btn_tipeKendaraan"
+            app:layout_constraintStart_toStartOf="@+id/tv_tipeKendaraan"
+            app:layout_constraintTop_toTopOf="@+id/btn_tipeKendaraan" />
+
+        <TextView
+            android:id="@+id/tv_brand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Brand [Character >= 5]:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_tipeKendaraan" />
+
+        <EditText
+            android:id="@+id/et_brand"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_brand"
+            app:layout_constraintTop_toBottomOf="@+id/tv_brand" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Name [Character >= 5]:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_brand" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+        <TextView
+            android:id="@+id/tv_license"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="License :"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_name" />
+
+        <EditText
+            android:id="@+id/et_license"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_license"
+            app:layout_constraintTop_toBottomOf="@+id/tv_license" />
+
+        <TextView
+            android:id="@+id/tv_speed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Top Speed:"
+            app:layout_constraintEnd_toStartOf="@+id/tv_gas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_license" />
+
+        <EditText
+            android:id="@+id/et_speed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/tv_speed"
+            app:layout_constraintStart_toStartOf="@+id/tv_speed"
+            app:layout_constraintTop_toBottomOf="@+id/tv_speed" />
+
+        <TextView
+            android:id="@+id/tv_gas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Gas Capacity"
+            app:layout_constraintStart_toEndOf="@+id/tv_speed"
+            app:layout_constraintEnd_toEndOf="@+id/tv_wheel"
+            app:layout_constraintTop_toBottomOf="@+id/et_license" />
+
+        <EditText
+            android:id="@+id/et_gas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/tv_gas"
+            app:layout_constraintStart_toStartOf="@+id/tv_gas"
+            app:layout_constraintTop_toBottomOf="@+id/tv_gas" />
+        <TextView
+            android:id="@+id/tv_wheel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Wheel"
+            app:layout_constraintStart_toEndOf="@+id/tv_gas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_license" />
+
+        <EditText
+            android:id="@+id/et_wheel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/tv_wheel"
+            app:layout_constraintStart_toStartOf="@+id/tv_wheel"
+            app:layout_constraintTop_toBottomOf="@+id/tv_wheel" />
+
+        <TextView
+            android:id="@+id/tv_type_mobil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Type [SUV/Supercar/Minivan]"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_speed" />
+
+        <EditText
+            android:id="@+id/et_type_mobil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_type_mobil"
+            app:layout_constraintTop_toBottomOf="@+id/tv_type_mobil" />
+        <TextView
+            android:id="@+id/tv_type_motor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:visibility="gone"
+            android:text="Type [Automatic/Manual]"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_speed" />
+
+        <EditText
+            android:id="@+id/et_type_motor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_type_motor"
+            app:layout_constraintTop_toBottomOf="@+id/tv_type_motor" />
+
+        <TextView
+            android:id="@+id/tv_entertainment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:visibility="gone"
+            android:text="Entertainment System amount:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_type_mobil" />
+
+        <EditText
+            android:id="@+id/et_entertainment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/tv_entertainment"
+            app:layout_constraintTop_toBottomOf="@+id/tv_entertainment" />
+        <TextView
+            android:id="@+id/tv_helm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:visibility="gone"
+            android:text="Helm amount:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_type_motor" />
+
+        <EditText
+            android:id="@+id/et_helm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_helm"
+            app:layout_constraintTop_toBottomOf="@+id/tv_helm" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="152dp"
+            android:text="SUBMIT"
+            app:layout_constraintTop_toBottomOf="@+id/et_speed"
+            tools:layout_editor_absoluteX="13dp" />
+
+        <TextView
+            android:id="@+id/result_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="temporary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_submit" />
+
+        <Button
+            android:id="@+id/btn_test_drive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginHorizontal="15dp"
+            android:text="TEST DRIVE"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/result_name" />
+
+        <TextView
+            android:id="@+id/tv_brand_ans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:visibility="gone"
+            android:text="Brand:"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/btn_test_drive" />
+        <TextView
+            android:id="@+id/tv_brand_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginHorizontal="15dp"
+            android:text="Brand ans"
+            app:layout_constraintStart_toEndOf="@+id/tv_brand_ans"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/btn_test_drive" />
+        <TextView
+            android:id="@+id/tv_name_ans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginHorizontal="15dp"
+            android:text="Name:"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tv_brand_ans" />
+        <TextView
+            android:id="@+id/tv_name_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginHorizontal="15dp"
+            android:text="Name ans"
+            app:layout_constraintStart_toEndOf="@+id/tv_name_ans"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tv_brand_ans" />
+        <TextView
+            android:id="@+id/tv_license_ans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:visibility="gone"
+            android:text="License Plate:"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name_ans" />
+        <TextView
+            android:id="@+id/tv_license_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:visibility="gone"
+            android:text="License ans"
+            app:layout_constraintStart_toEndOf="@+id/tv_license_ans"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name_ans" />
+        <TextView
+            android:id="@+id/tv_type_ans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:text="Type:"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tv_license_ans" />
+        <TextView
+            android:id="@+id/tv_type_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:visibility="gone"
+            android:text="Type ans"
+            app:layout_constraintStart_toEndOf="@+id/tv_type_ans"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tv_license_ans" />
+        <TextView
+            android:id="@+id/tv_gas_ans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:visibility="gone"
+            android:text="Gas Capacity:"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tv_type_ans" />
+        <TextView
+            android:id="@+id/tv_gas_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:visibility="gone"
+            android:text="Gas ans"
+            app:layout_constraintStart_toEndOf="@+id/tv_gas_ans"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tv_type_ans" />
+        <TextView
+            android:id="@+id/tv_speed_ans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:visibility="gone"
+            android:text="Top Speed:"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tv_gas_ans" />
+        <TextView
+            android:id="@+id/tv_speed_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginHorizontal="15dp"
+            android:text="Speed ans"
+            app:layout_constraintStart_toEndOf="@+id/tv_speed_ans"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tv_gas_ans" />
+        <TextView
+            android:id="@+id/tv_wheel_ans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:visibility="gone"
+            android:text="Wheel(s):"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tv_speed_ans" />
+        <TextView
+            android:id="@+id/tv_wheel_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:visibility="gone"
+            android:text="Wheel ans"
+            app:layout_constraintStart_toEndOf="@+id/tv_wheel_ans"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tv_speed_ans" />
+        <TextView
+            android:id="@+id/tv_entertainment_ans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:text="Entertainment System:"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tv_wheel_ans" />
+        <TextView
+            android:id="@+id/tv_entertainment_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:text="Entertainment ans"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/tv_entertainment_ans"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tv_wheel_ans" />
+        <TextView
+            android:id="@+id/tv_helm_ans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:text="Helm:"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="gone"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tv_wheel_ans" />
+        <TextView
+            android:id="@+id/tv_helm_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:visibility="gone"
+            android:text="Helm ans"
+            app:layout_constraintStart_toEndOf="@+id/tv_helm_ans"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tv_wheel_ans" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="15dp"
+            android:visibility="gone"
+            android:text="Price:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_helm_ans" />
+        <EditText
+            android:id="@+id/et_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/tv_price"
+            app:layout_constraintTop_toBottomOf="@+id/tv_price" />
+        <TextView
+            android:id="@+id/price_ans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temp Price"
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/et_price"
+            android:layout_marginHorizontal="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/btn_submit_last"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:text="SUBMIT"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/price_ans" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
